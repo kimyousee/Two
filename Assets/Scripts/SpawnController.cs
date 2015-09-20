@@ -30,7 +30,8 @@ public class SpawnController : MonoBehaviour {
         spawnBegan = false;
         stopSpawn = true;
         gameCtr = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        border = GameObject.FindGameObjectWithTag("Border").GetComponent<Border>();
+        //border = GameObject.FindGameObjectWithTag("Border").GetComponent<Border>();
+        border = GameObject.Find("Border").GetComponent<Border>();
         foreach( GameObject obj in GameObject.FindGameObjectsWithTag("Block"))
         {
             Block block = obj.GetComponent<Block>();

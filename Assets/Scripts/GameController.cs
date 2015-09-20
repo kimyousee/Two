@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
         blockMisplay = false;
         gravity = "down";
         blockIndex = 0;
-        blocksToPlace = new string[8] { "blue", "red", "yellow", "green", "blue", "blue", "red", "green" };
+        blocksToPlace = new string[4] { "blue", "red", "yellow", "green"};
         gravitySpeed = 2f;
         spawnCtr = GameObject.Find("SpawnController").GetComponent<SpawnController>();
         border = GameObject.Find("Border").GetComponent<Border>();

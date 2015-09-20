@@ -61,7 +61,10 @@ public class Block : MonoBehaviour {
                 {
                     gravitySpeed -= 1.0f;
                 }
-                rb.AddForce(-(transform.up * gravitySpeed));
+                int sign = -1;
+                if (gravity == "up") sign = 1;
+                if (gravity == "down") sign = -1; 
+                rb.AddForce(sign*(transform.up * gravitySpeed));
                 movement = CrossPlatformInputManager.GetAxis("Horizontal");
                 if (movement != 0.0f && !colliding)
                 {
@@ -81,7 +84,10 @@ public class Block : MonoBehaviour {
                 {
                     gravitySpeed -= 1.0f;
                 }
-                rb.AddForce(-(transform.right * gravitySpeed));
+                int sign = -1;
+                if (gravity == "right") sign = 1;
+                if (gravity == "left") sign = -1;
+                rb.AddForce(sign*(transform.right * gravitySpeed));
                 movement = CrossPlatformInputManager.GetAxis("Vertical");
                 if (movement != 0.0f && !colliding)
                 {
